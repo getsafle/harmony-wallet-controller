@@ -78,6 +78,6 @@ rawTx: {
   gasPrice, // gasPrice
   data, // data in hex to send
   nonce, // transaction nonce
-  chainId, // chainID | 1666700000 - TESTNET, 1666700000 - MAINNET
+  chainId, // chainID | 1666700000 - TESTNET, 1666600000 - MAINNET
 }
 ```
