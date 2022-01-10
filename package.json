@@ -1,7 +1,7 @@
 {
   "name": "@getsafle/vault-harmony-controller",
   "version": "1.0.0",
-  "description": "",
+  "description": "Harmony controller for safle vault.",
   "engines": {
     "node": ">= 10"
   },
