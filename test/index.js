@@ -84,30 +84,6 @@ describe('Initialize wallet ', () => {
         console.log("acc ", acc)
     })
 
-    // it("Get fees", async () => {
-    //     const accounts = await harmonyKeyring.getAccounts()
-    //     const web3 = new Web3(TESTNET.URL);
-
-    //     const tokenContractHarmony = new web3.eth.Contract(
-    //         tokenContract.abi,
-    //         tokenContract.networks[`${TESTNET.CHAIN_ID}`].address
-    //     );
-
-    //     const txData = tokenContractHarmony.methods.mint(CONTRACT_MINT_PARAM.amount);
-    //     const data = txData.encodeABI();
-
-    //     const tx = {
-    //         from: accounts[0],
-    //         to: HARMONY_CONTRACT,
-    //         value: HARMONY_AMOUNT_TO_CONTRACT,
-    //         data
-    //     }
-
-    //     const fees = await harmonyKeyring.getFees(tx, web3)
-    //     console.log("fees ", fees)
-
-    // })
-
     it("Get fees with manual gasLimit", async () => {
         const web3 = new Web3(TESTNET.URL);
         const tx = {
