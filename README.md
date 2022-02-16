@@ -7,9 +7,9 @@
 ## Initialize the Harmony Controller class
 
 ```
-const controller = require('@getsafle/vault-harmony-controller');
+const { KeyringController, getBalance } = require('@getsafle/vault-harmony-controller');
 
-const harmonyController = new controller({
+const harmonyController = new KeyringController({
   encryptor: {
     // An optional object for defining encryption schemes:
     // Defaults to Browser-native SubtleCrypto.
