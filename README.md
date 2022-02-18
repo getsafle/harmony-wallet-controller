@@ -7,9 +7,9 @@
 ## Initialize the Harmony Controller class
 
 ```
-const controller = require('@getsafle/vault-harmony-controller');
+const { KeyringController, getBalance } = require('@getsafle/vault-harmony-controller');
 
-const harmonyController = new controller({
+const harmonyController = new KeyringController({
   encryptor: {
     // An optional object for defining encryption schemes:
     // Defaults to Browser-native SubtleCrypto.
@@ -64,7 +64,7 @@ const signedMsg = await harmonyController.signMessage(msgParams);
 ### Sign Typed Data (EIP-712)
 
 ```
-const signedData = await harmonyController.signTypedMessage (msgParams);
+const signedData = await harmonyController.signTypedMessage(msgParams);
 ```
 
 #### Raw transaction object
@@ -80,4 +80,10 @@ rawTx: {
   nonce, // transaction nonce
   chainId, // chainID | 1666700000 - TESTNET, 1666600000 - MAINNET
 }
+```
+
+### Get balance
+
+```
+const balance = await getBalance(address, web3);
 ```
