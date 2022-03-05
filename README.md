@@ -61,6 +61,12 @@ const signedTx = await harmonyController.signTransaction(harmonyTx, _fromAddress
 const signedMsg = await harmonyController.signMessage(msgParams);
 ```
 
+### Sign a message
+
+```
+const signedObj = await harmonyController.sign(msgParams, pvtKey, web3Obj);
+```
+
 ### Sign Typed Data (EIP-712)
 
 ```
