@@ -91,12 +91,17 @@ describe('Initialize wallet ', () => {
     })
 
     it("Get fees with manual gasLimit", async () => {
+        const accounts = await harmonyKeyring.getAccounts()
         const web3 = new Web3(TESTNET.URL);
         const tx = {
             gasLimit: 2100
         }
         const fees = await harmonyKeyring.getFees(tx, web3)
         console.log(" with manual gasLimit ", fees)
+
+        const privateKey = await harmonyKeyring.exportAccount(accounts[0])
+        const tx3 = await harmonyKeyring.sign(TESTING_MESSAGE_1, privateKey, web3)
+        console.log("tx3 ", tx3)
     })
 
     it("Should import correct account ", async () => {
